@@ -1,0 +1,15 @@
+Rest APi
+
+
+
+Post /url :generate a new shortened url and returns the shortened url in the format 
+
+
+Get /:id   :Redierect to the original url;
+
+
+Get/URL/analytics/:id    : returns the clicks for the provided short id
+
+
+
+  
