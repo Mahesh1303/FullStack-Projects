@@ -43,7 +43,6 @@ function Login() {
     <div className="bg-slate-200 max-w-md mx-auto p-8 rounded-3xl shadow-lg">
       <h2 className="text-center text-2xl font-semibold text-gray-700 mb-6">Login</h2>
       <form onSubmit={handleLoginSubmit} className="space-y-6">
-        {/* Email Input */}
         <div>
           <label htmlFor="email" className="block text-gray-600 font-medium mb-2">
             Email
@@ -59,7 +58,6 @@ function Login() {
           />
         </div>
 
-        {/* Password Input */}
         <div>
           <label htmlFor="password" className="block text-gray-600 font-medium mb-2">
             Password
@@ -75,7 +73,6 @@ function Login() {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-red-700 text-white py-3 rounded-full hover:bg-red-600 transition duration-300"
@@ -83,7 +80,6 @@ function Login() {
           Login
         </button>
 
-        {/* Registration Link */}
         <div className="text-center mt-4">
           <Link to="/registration" className="text-blue-500 hover:underline">
             Don't have an account? Register here.

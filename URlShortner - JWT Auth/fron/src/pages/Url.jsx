@@ -19,11 +19,7 @@ function Url() {
     }
   }, [isAuthenticated, loading, navigate]);
 
-
-
-
-
-
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,6 +49,7 @@ function Url() {
   if (loading) return <div>Loading authentication...</div>;
   if (fetchLoading) return <div>Loading URLs...</div>; 
   if (err) return <div>Error: {err}</div>;
+  
 
   return (
     <div className="space-y-20">
@@ -72,7 +69,7 @@ function Url() {
           </button>
         </form>
         {short ? (
-          <a href={`http://localhost:500/url/${short.id}`} target="_blank" rel="noopener noreferrer">
+          <a href={`http://localhost:500/url/${short.id}`} >
             <h1>Your Short URL is:</h1>
             <h1 className="hover:text-blue-600">{`http://localhost:500/url/${short.id}`}</h1>
           </a>

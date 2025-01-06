@@ -49,7 +49,6 @@ function Registration() {
           Registration
         </h1>
         <form onSubmit={handleRegisterSubmit} className="space-y-6">
-          {/* Name Input */}
           <div>
             <label htmlFor="name" className="block text-gray-600 font-medium mb-2">
               Name
@@ -65,7 +64,6 @@ function Registration() {
             />
           </div>
 
-          {/* Email Input */}
           <div>
             <label htmlFor="email" className="block text-gray-600 font-medium mb-2">
               Email
@@ -81,7 +79,6 @@ function Registration() {
             />
           </div>
 
-          {/* Password Input */}
           <div>
             <label htmlFor="password" className="block text-gray-600 font-medium mb-2">
               Password
@@ -97,7 +94,6 @@ function Registration() {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-red-700 text-white py-3 rounded-full hover:bg-red-600 transition duration-300"
@@ -105,7 +101,6 @@ function Registration() {
             Register
           </button>
 
-          {/* Already Have an Account Link */}
           <div className="text-center mt-4">
             <Link to="/" className="text-blue-500 hover:underline">
               Already have an account? Login here.

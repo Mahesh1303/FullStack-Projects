@@ -23,7 +23,19 @@ function UseUserAuth() {
     CheckAuth();
   }, []);
 
-  return { isAuthenticated, loading }; 
+  const Logout= async ()=>{
+    try {
+        const response = axios.get(`${Backendurl}/user/logout`,{withCredentials:true})
+        if(response.status===204)
+          SetisAuthenticated(false)
+    } catch (error) {
+      console.log(error)
+      
+    }
+  }
+
+
+  return { isAuthenticated, loading ,Logout}; 
 }
 
 export default UseUserAuth;

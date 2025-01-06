@@ -10,7 +10,7 @@ function UseFetch(urllink) {
     setLoading(true);
     try {
       const response = await axios.get(urllink, {
-        withCredentials: true, // Include cookies for authentication
+        withCredentials: true, 
       });
   
       if (response) {
@@ -30,13 +30,13 @@ function UseFetch(urllink) {
 
   useEffect(() => {
     fetchUrl();
-  }, [urllink]); // Run only when the URL changes
+  }, [urllink]); 
 
   return {
     data,
     err,
     loading,
-    refetch: fetchUrl, // Expose the fetch function
+    refetch: fetchUrl, 
   };
 }
 

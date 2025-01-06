@@ -40,6 +40,9 @@ const RedirectOrgURL = async (req, res) => {
   return res.redirect(userURL.redirectURL);
 };
 
+
+
+
 const HandlegetAnalyticsCount = async (req, res) => {
   const shortId = req.params.id;
   const result = await URLDB.findOne({ shortId });
@@ -49,6 +52,9 @@ const HandlegetAnalyticsCount = async (req, res) => {
     VisitHistory: result.VisitHistory,
   });
 };
+
+
+
 
 const HandleGetAllUrl = async (req, res) => {
   try {

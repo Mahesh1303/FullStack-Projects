@@ -58,4 +58,29 @@ const HandleUserLogin= async (req,res)=>{
 
 
 
-module.exports = { HandleSignUp ,HandleUserLogin};
+const HandleUserLogout=async(req,res)=>{
+
+        try {
+            const user=req.user
+            if(!user){
+                return res.json({
+                    message:"User is Unauthorized"
+                })
+            
+            }
+              return res.status(204)
+                    .clearCookie("UserSessionId")
+                    .json({
+                        message:"User Logged Out Successfully"
+                    })
+            
+        } catch (error) {
+            console.log(error)
+        }
+
+}
+
+
+
+
+module.exports = { HandleSignUp ,HandleUserLogin,HandleUserLogout};
